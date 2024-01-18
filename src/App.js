@@ -5,6 +5,7 @@ import MovieCard from "./MovieCard";
 import {nanoid} from "nanoid";
 
 const API_URL="http://www.omdbapi.com?apikey=4b272b37";
+//const API_URL2="http://www.omdbapi.com/?i=tt3896198&apikey=5a5a414e";
 
 const App = () => {
     const[movies,setMovies]=React.useState();
@@ -22,7 +23,7 @@ const App = () => {
 
   return (
   <div className='app'>
-      <h1>LuffyLand</h1>
+      <h1>Movie Land</h1>
         <div className='search'>
           <input
             placeholder='Search For Movies'
