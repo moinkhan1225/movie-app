@@ -4,17 +4,18 @@ import SearchIcon from './search.svg';
 import MovieCard from "./MovieCard";
 import {nanoid} from "nanoid";
 
-const API_URL="http://www.omdbapi.com?apikey=4b272b37";
+const API_URL="https://www.omdbapi.com?apikey=4b272b37";
 //const API_URL2="http://www.omdbapi.com/?i=tt3896198&apikey=5a5a414e";
 
 const App = () => {
     const[movies,setMovies]=React.useState();
     const[searchTerm,setSearchTerm]=React.useState();
+    
     const searchMovies=async(title)=>{
-    const response =await fetch(`${API_URL}&s=${title}`);
-    const data = await response.json();
-    setMovies(data.Search);
-  }
+      const response =await fetch(`${API_URL}&s=${title}`);
+      const data = await response.json();
+      setMovies(data.Search);
+    }
 
   React.useEffect(()=>{
     searchMovies('Avengers');
